@@ -1,0 +1,396 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+:root{
+    /* ========== */
+    /* theme 1 */
+    /* ========== */
+        /* backgrounds */
+    --theme-one-main-background: hsl(222, 26%, 31%);
+    --theme-one-toggle-background-keypad-background: hsl(223, 31%, 20%);
+    --theme-one-screen-background: hsl(224, 36%, 15%);
+    /* butttons */
+
+    --theme-one-key-background: hsl(225, 21%, 49%);
+    --theme-one-key-shadow: hsl(224, 28%, 35%);
+
+    --theme-one-key-background-toggle: hsl(6, 63%, 50%);
+    --theme-one-toggle-key-shadow: hsl(6, 70%, 34%);
+
+    --theme-one-btn-key-background: hsl(30, 25%, 89%);
+    --theme-one-btn-key-shadow: hsl(28, 16%, 65%);
+    /* text */
+    --theme-one-Very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --White: hsl(0, 0%, 100%);
+    /* ========== */
+    /* theme 2 */
+    /* ========== */
+    /* background */
+
+    --theme-two-main-background: hsl(0, 0%, 90%);
+    --theme-two-toggle-background-keypad-background: hsl(0, 5%, 81%);
+    --theme-two-screen-background: hsl(0, 0%, 93%);
+    /* buttons */
+    --theme-two-key-background: hsl(185, 42%, 37%);
+    --theme-two-key-shadow: hsl(185, 58%, 25%);
+
+    --theme-two-key-background-toggle: hsl(25, 98%, 40%);
+    --theme-two-toggle-key-shadow: hsl(25, 99%, 27%);
+
+    --theme-two-btn-key-background: hsl(45, 7%, 89%);
+    --theme-two-btn-key-shadow: hsl(35, 11%, 61%);
+    /* text */
+    --theme-two-Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+
+    /* ========== */
+    /* theme 3 */
+    /* ========== */
+    /* background */
+    --theme-three-main-background: hsl(268, 75%, 9%);
+    --theme-three-toggle-background-keypad-background-screen-background: hsl(268, 71%, 12%);
+    /* buttons */
+    --theme-three-key-background: hsl(281, 89%, 26%);
+    --theme-three-key-shadow: hsl(285, 91%, 52%);
+
+    --theme-three-key-background-toggle: hsl(176, 100%, 44%);
+    --theme-three-toggle-key-shadow: hsl(177, 92%, 70%);
+
+    --theme-three-btn-key-background: hsl(268, 47%, 21%);
+    --theme-three-btn-key-shadow: hsl(290, 70%, 36%);
+
+    /* text */
+    --theme-three-Light-yellow: hsl(52, 100%, 62%);
+    --theme-three-Very-dark-blue: hsl(198, 20%, 13%);
+  
+}
+body{
+    background:var(--theme-one-main-background);
+    width:100vw;
+    min-height:100vh;
+    padding:1rem;
+    font-size:32px;
+    font-weight:700;
+    font-family: 'League Spartan', sans-serif;
+    color:#fff;
+}
+body.one,
+body.one .main,
+body.one .main .top{
+    background:var(--theme-one-main-background);
+    color:#fff;
+}
+body.two,
+body.two .main,
+body.two .main .top{
+    background:var(--theme-two-main-background);
+    color:#222;
+}
+body.three,
+body.three .main,
+body.three .main .top,
+.main .buttons{
+    background:var(--theme-three-main-background);
+    color:var(--theme-three-Light-yellow);
+}
+.main{
+    width:550px;
+    height:100%;
+    margin:2rem auto;
+    background:var(--theme-one-main-background);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:2rem;
+}
+
+
+
+.main .top{
+    background-color:var(--theme-one-main-background);
+    width:100%;
+    display:grid;
+    grid-template-rows: 1rem minmax(5rem , auto);
+    gap:1rem;
+}
+
+
+.top .header{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.top .header .themes{
+    font-size:15px;
+    display:flex;
+    align-items:flex-end;
+    justify-items: center;
+    gap:1rem;
+    padding-bottom:1rem;
+    text-transform:uppercase;
+}
+.themes .numbers{
+    display:flex;
+    justify-content: space-between;
+    font-size:0.8rem;
+    padding:5px;
+}
+.header .slider{
+    width:55px;
+    height:20px;
+    border-radius:1rem;
+    padding:2px 3px;
+    position:relative;
+    background-color:var(--theme-one-toggle-background-keypad-background)
+}
+.slider:hover{
+    cursor:pointer;
+}
+.slider .ball{
+    width:15px;
+    height:15px;
+    background-color:var(--theme-one-key-background-toggle);
+    border-radius:50%;
+}
+
+
+.top .screen{
+    width:100%;
+    height:100%;
+    min-height:8rem;
+    background-color:var(--theme-one-screen-background);
+    border-radius:0.5rem;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items:flex-end;
+    padding:1rem;
+    font-size:2.5rem;
+    word-wrap:break-word;
+    word-break:break-all;
+    text-align:right;
+}
+
+body.one .top .screen{
+    background-color:var(--theme-one-screen-background);
+
+}
+body.two .top .screen{
+    background-color:var(--theme-two-screen-background);
+
+}
+.screen .previous{
+    font-size:1.7rem;
+}
+body.one .screen{
+    color:#fff;
+}
+body.two .screen{
+    color:#333;
+}
+
+body.three .screen{
+    color:var(--theme-three-Light-yellow);
+    background-color:var(--theme-three-btn-key-background);
+}
+
+
+/* =========== */
+/* BUTTONS */
+/* =========== */
+body.one .main .buttons{
+    background-color:var(--theme-one-toggle-background-keypad-background);
+
+}
+body.two .main .buttons{
+    background-color:var(--theme-two-toggle-background-keypad-background)
+}
+body.three .main .buttons{
+    background-color:var(--theme-three-key-background);
+}
+.main .buttons{
+    display:grid;
+    justify-content: center;
+    align-items:center;
+    align-content:center;
+    grid-template-columns:repeat(4,100px);
+    grid-template-rows:repeat(5, 70px);
+    width:100%;
+    height:100%;
+    gap:1rem;
+   
+    border-radius:1rem;
+    padding:1rem;
+    outline:none;
+    border:none;
+}
+
+.btn{
+    padding:0.5rem 1rem;
+    font-size:32px;
+    font-weight: 700;
+    border-radius:1rem;
+    border:none;
+    outline:none;
+    text-align:center;
+    background-color: var(--theme-one-btn-key-background);
+}
+.btn:hover{
+    cursor:pointer;
+   
+}
+.span-two{
+    grid-column:span 2;
+}
+
+
+body.one .btn[data-delete],
+body.one .btn[data-reset]{
+    background-color:var(--theme-one-key-background);
+
+    color:#fff;
+    font-weight:500;
+    
+}
+body.one .btn[data-delete]:hover,
+body.one .btn[data-reset]:hover{
+    opacity:0.8;
+}
+body.one .btn[data-equals]{
+    background-color:var(--theme-one-key-background-toggle);
+    color:#fff;
+}
+
+body.one .btn[data-equals]:hover{
+    opacity:0.9;
+}
+
+body.one .btn[data-number],
+body.one .btn[data-operation] {
+    color:var(--theme-one-Very-dark-grayish-blue);
+    box-shadow:1px 3px 3px var(--theme-one-btn-key-shadow);
+}
+
+/* body two */
+body.two .btn{
+    box-shadow:1px 5px 3px var(--theme-two-btn-key-shadow)
+}
+body.two .btn[data-delete],
+body.two .btn[data-reset]{
+    background-color:var(--theme-two-key-background);
+    box-shadow:1px 5px 3px var(--theme-two-key-shadow);
+    color:#fff;
+    font-weight:500;
+    
+}
+body.two .btn[data-delete]:hover,
+body.two .btn[data-reset]:hover{
+    opacity:0.8;
+}
+body.two .btn[data-equals]{
+    background-color:var(--theme-two-key-background-toggle);
+    box-shadow:1px 5px 3px var(--theme-two-toggle-key-shadow);
+    color:#fff;
+}
+
+body.two .btn[data-equals]:hover{
+    opacity:0.9;
+}
+
+body.two .btn[data-number],
+body.two .btn[data-operation] {
+    color:var(--theme-one-Very-dark-grayish-blue);
+    box-shadow:1px 3px 3px var(--theme-two-btn-key-shadow);
+}
+
+
+/* body three */
+body.three .btn{
+   color:#fff;
+    background-color:var(--theme-three-btn-key-background);
+    box-shadow:1px 5px 3px var(--theme-three-key-shadow);
+}
+body.three .btn[data-delete],
+body.three .btn[data-reset]{
+    background-color:var(---theme-three-key-background);
+    box-shadow:1px 3px 3px var(--theme-three-key-shadow);
+    color:#fff;
+    font-weight:500;
+    
+}
+body.three .btn[data-delete]:hover,
+body.three .btn[data-reset]:hover{
+    opacity:0.8;
+}
+body.three .btn[data-equals]{
+    background-color:var(--theme-three-key-background-toggle);
+    box-shadow:1px 3px 3px var(--theme-three-toggle-key-shadow);
+    color:#fff;
+}
+
+body.three .btn[data-equals]:hover{
+    opacity:0.9;
+}
+
+body.three .btn[data-number],
+body.three .btn[data-operation] {
+    color:var(--theme-three-Light-yellow);
+    box-shadow:1px 3px 3px var(--theme-three-btn-key-shadow);
+}
+body.three .btn:hover{
+    opacity:0.7;
+}
+
+/* ON SMALLER SCREEN */
+@media(max-width:600px){
+    .top .screen{
+        min-height:5rem;
+        padding:0.5rem 1rem;
+        gap:0.5rem;
+        font-size:2rem;
+    }
+    .screen .previous{
+        font-size:1.4rem;
+    }
+.main{
+    width:90%;
+    gap:1rem;
+}
+
+.main .buttons{
+    display:grid;
+    justify-content: center;
+    align-items:center;
+    align-content:center;
+    grid-template-columns:repeat(4,50px);
+    grid-template-rows:repeat(5, 50px);
+    width:100%;
+    height:100%;
+    gap:1rem;
+   
+    border-radius:1rem;
+    padding:1rem;
+    outline:none;
+    border:none;
+}
+
+.btn{
+    font-size:20px;
+    font-weight: 700;
+    border-radius:0.6rem;
+    background-color: var(--theme-one-btn-key-background);
+}
+body.three .btn[data-delete],
+body.three .btn[data-reset]{
+   font-size:14px;
+   text-align:center;
+   padding:0.5rem;
+    
+}
+}
